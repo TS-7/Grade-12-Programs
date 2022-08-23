@@ -14,7 +14,9 @@ def fibb(n):
         i += 1
 fibb(n)
 
-''' Left side of the record, sample output needs to be written. Write it as it is on the console. Example only for the first program below.
+''' Left side of the record, sample output needs to be written. Write it as it is on the console. Example only for the first program below, I'll add reminders
+for the rest.
+
 If you can't follow the same for the rest of the programs, you really need to consider quitting <3 '''
 
 ''' SAMPLE OUTPUT EXAMPLE [ WRITE IT ON THE BLOODY LEFT SIDE ] '''
