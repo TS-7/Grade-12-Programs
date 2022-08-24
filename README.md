@@ -1,4 +1,4 @@
-# Grade-12-Programs [ APS ]
+# All Programs [ APS ]
 
 *-> Trying to keep all the programs as updated as possible. If you are sure about how GitHub works, feel free to open pull requests to correct any mistakes*
 

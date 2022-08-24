@@ -1,22 +1,25 @@
 ''' PROGRAM 8: WAP to search the records in binary file '''
 
 import pickle
-def search():
-    f = open("smack.dat", "rb")
-    rea = pickle.load(f)
-    res = 0
-    inp = int(input("Enter the roll number you want to search for: "))
-    for i in rea:
-        if inp == i[0]:
-            print('Record Found!')
-            print("Name of student: ",i[1])
-            print("Marks of student: ",i[2])
-            res += 1
-            break
-    if res == 0:
-        print("No records found")
-    f.close()
+def searchb():
+    stu = {}
+    found = False
+    f = open('smack.dat', 'rb+')
+    srch = int(input("Enter the roll number you want to search: "))
+    search = [srch]
 
-search()
+    try:
+        print('Searching the binary for roll no.', srch)
+        while True:
+            stu = pickle.load(f)
+            if stu['Rollno'] in search:
+                print(f"Student Name: {stu['Name']}\nStudent Marks: {stu['Marks']}")
+                found = True
+    except EOFError:
+        if found == False:
+            print("No records found with the given values")
+        f.close()
+        
+searchb()        
 
 ''' FRIENDLY REMINDER TO WRITE SAMPLE OUTPUT - LEFT SIDE OF THE RECORD '''
