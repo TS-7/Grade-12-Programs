@@ -42,3 +42,5 @@ def search():
     f.close()
 
 search()
+
+''' FRIENDLY REMINDER TO WRITE THE SAMPLE OUTPUT ON THE LEFT SIDE OF THE RECORD '''
