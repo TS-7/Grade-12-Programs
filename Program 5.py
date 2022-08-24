@@ -15,9 +15,9 @@ def cnt():
         ch = ch.lower()
         if( ch in v ):
             vowels += 1
-        elif:
-            ch.isalpha()
-            cons += 1
+        else:
+            if (ch.isalpha()):
+                cons += 1
     f.close()
     print("Vowels are : ",vowels)
     print("Consonants are : ",cons)
