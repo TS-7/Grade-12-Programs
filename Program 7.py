@@ -20,5 +20,6 @@ def writeb():
             print("Invalid input")
             break 
     f.close()
-
+    
+writeb()
 ''' FRIENDLY REMINDER TO WRITE THE SAMPLE OUTPUT ON THE LEFT SIDE OF THE RECORD '''
