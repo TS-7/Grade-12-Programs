@@ -5,14 +5,13 @@ import pickle
 
 def writeb():
     f = open ("smack.dat","wb+")
-    record = []
     while True:
         rno = int(input("Enter roll no: "))
         name = str(input("Enter name: "))
         marks = int(input("Enter marks: "))
         data = [rno, name, marks]
-        record.append(data)
-        ch= str(input("Would you like to enter more records: "))
+        pickle.dump(data, f)
+        ch = str(input("Would you like to enter more records: "))
         if ch == 'yes':
             pass
         elif ch == 'no':
@@ -20,7 +19,6 @@ def writeb():
         elif (ch != 'yes' and ch != 'no'):
             print("Invalid input")
             break 
-    pickle.dump(record, f)
     f.close()
 
 writeb()
@@ -30,13 +28,11 @@ def search():
     rea = pickle.load(f)
     res = 0
     inp = int(input("Enter the roll number you want to search for: "))
-    for i in rea:
-        if inp == i[0]:
-            print('Record Found!')
-            print("Name of student: ",i[1])
-            print("Marks of student: ",i[2])
-            res += 1
-            break
+    if rea[0] == inp:
+        print('Record Found!')
+        print("Name of student:",rea[1])
+        print("Marks of student:",rea[2])
+        res += 1
     if res == 0:
         print("No records found")
     f.close()
