@@ -2,7 +2,7 @@
 
 import pickle
 
-def test():
+def update():
     f = open("smack.dat", "rb+")
     r = int(input("Enter the roll number you want to update: "))
     try:
@@ -19,7 +19,7 @@ def test():
     except EOFError:
         f.close()
 
-test()
+update()
 
 def read():
     f = open ("smack.dat","rb+")
@@ -31,26 +31,5 @@ def read():
         f.close()
 
 read()
-
-def update():
-    f = open("smack.dat", "rb")
-    r = int(input("Enter the roll number you want to update"))
-    b = pickle.load(f)
-    found = 0
-    for i in b:
-        if r == i[0]:
-            mark = int(input("Enter the marks you want to update for this user: "))
-            i[2] == mark
-            found = 1
-            break
-
-    if found == 0:
-        print("Records not found")
-        f.close()
-    else:
-        f2 = open("smack.dat", "wb")
-        f2.seek(0)
-        pickle.dump(b, f2)
-        f2.close()
 
 ''' FRIENDLY REMINDER TO WRITE THE SAMPLE OUTPUT ON THE LEFT SIDE OF THE RECORD '''
